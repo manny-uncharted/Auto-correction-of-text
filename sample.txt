@@ -1,0 +1,10 @@
+In the preceding code, we apply different weights to the search vectors built using the title and body
+fields. The default weights are D, C, B, and A, and they refer to the numbers 0.1, 0.2, 0.4, and 1.0,
+respectively. We apply a weight of 1.0 to the title search vector (A) and a weight of 0.4 to the body
+vector (B). Title matches will prevail over body content matches. We filter the results to display only
+the ones with a rank higher than 0.3.
+Searching with trigram similarity
+Another search approach is trigram similarity. A trigram is a group of three consecutive characters.
+You can measure the similarity of two strings by counting the number of trigrams that they share.
+This approach turns out to be very effective for measuring the similarity of words in many languages.
+To use trigrams in PostgreSQL, you will need to install the pg_trgm extension first. Execute the following command in the shell prompt to connect to your database:
